@@ -1,0 +1,10 @@
+databaseAddress: mydatabase.changeme.com
+databasePort: 12345
+
+# use the simple server factory if you only want to run on a single port
+server:
+  type: simple
+  applicationContextPath: /v1
+  connector:
+    type: http
+    port: 8080
