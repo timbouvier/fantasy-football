@@ -9,7 +9,7 @@ Dropwizard for REST interface,  Google Guice for dependency injection, and mocki
 make build
 ```
 
-#Deploy
+# Deploy
 ```bash
 docker run -d --net=host fantasy-football-server:0.01
 ```
