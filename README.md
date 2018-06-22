@@ -6,6 +6,7 @@ Dropwizard for REST interface,  Google Guice for dependency injection, and mocki
 
 # Build
 ```bash
+cd container/
 make build
 ```
 
