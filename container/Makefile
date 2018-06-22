@@ -8,13 +8,15 @@ env:
 	$(call get-build-env)
 
 module: env
-	@echo "running build..."
 	$(call docker-run-build-container, mvn package)
 	(cp ../target/fantasy-football-server-1.0-SNAPSHOT.jar ./)
 	(cp ../config/server.yml ./)
 
 build: module
 	docker build -t $(SERVICE_NAME):$(SERVICE_TAG) .
+
+test: env
+	$(call docker-run-build-container, mvn test)
 
 push: build
 	docker tag $(SERVICE_NAME):$(SERVICE_TAG) $(DEPLOY_REGISTRY)/$(SERVICE_NAME):$(SERVICE_TAG)

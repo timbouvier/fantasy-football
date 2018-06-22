@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Contest {
 
-    enum Type {
+    public enum Type {
         BASE_TYPE,
         HEAD_TO_HEAD,
         POOL_100,
